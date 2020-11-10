@@ -1,1 +1,22 @@
-# analisador-sintatico-de-precedencia-fraca
+# ANALISADOR SINTÁTICO DE PRECEDENCIA FRACA
+
+## GRAMÁTICA G':
+
+* E -> E + M (ADIÇÃO COM RECURSÃO)
+* E -> M     (FIM DA RECURSÃO DA ADIÇÃO)
+* M -> M * P (MULTIPLICAÇÃO COM RECURSÃO) 
+* M -> P     (FIM DA RECURSÃO DA MULTIPLICAÇÃO) 
+* P -> (E)   (POSSIBILITA O USO DE PARENTESES) 
+* P -> V     (TERMINAL)
+
+
+## TESTE SINTÁTICO 1: V+V*V (  VÁLIDO  )
+
+![](Imagens/1.png)
+
+
+---
+
+## TESTE SINTÁTICO 2: V-V*V (  NÃO VÁLIDO  )
+
+![](Imagens/2.png)
